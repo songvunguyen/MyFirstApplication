@@ -2,6 +2,7 @@ package com.example.myfirstapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.d("fail", "it's not working");
+//        Log.d("fail", "it's not working");
     }
 
 //    public void disable(View v){
@@ -30,13 +31,19 @@ public class MainActivity extends AppCompatActivity {
 //        button.setText("New Disabled");
 //    }
 
-    public void handleText(View v){
-        EditText t = findViewById(R.id.source);
-        String input = t.getText().toString();
-        ((TextView)findViewById(R.id.output)).setText(input);
-//        Log.d("info", input);
+//    public void handleText(View v){
+//        EditText t = findViewById(R.id.source);
+//        String input = t.getText().toString();
+//        ((TextView)findViewById(R.id.output)).setText(input);
+////        Log.d("info", input);
+//
+//        //Alert take (Activity, text, duration)
+//        Toast.makeText(this, input, Toast.LENGTH_LONG).show();
+//    }
 
-        //Alert take (Activity, text, duration)
-        Toast.makeText(this, input, Toast.LENGTH_LONG).show();
+    public void lauchSettings(View v){
+        //lauch a new activity
+        Intent i = new Intent(this, SettingActivity.class);
+        startActivity(i);
     }
 }
