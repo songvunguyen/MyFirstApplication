@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyFirstApplication</string>
+    <string name="my_string">Settings</string>
 </resources>
