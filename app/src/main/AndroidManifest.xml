@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstApplication">
         <activity
-            android:name=".SettingActivity"
+            android:name=".SettingActivity" android:label="Settings"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity" android:label="Learn Android"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
