@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
     public void lauchSettings(View v){
         //lauch a new activity
         Intent i = new Intent(this, SettingActivity.class);
+        String msg = ((EditText)findViewById(R.id.editText)).getText().toString();
+        i.putExtra("Cool", msg);
         startActivity(i);
     }
 }
